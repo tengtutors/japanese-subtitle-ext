@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>JP Subtitles</h1>
+
+    <div class="field">
+      <label for="apiKey">OpenAI API Key</label>
+      <input type="password" id="apiKey" placeholder="sk-..." />
+    </div>
+
+    <div class="field">
+      <label for="fontSize">Subtitle Size: <span id="fontSizeValue">24</span>px</label>
+      <input type="range" id="fontSize" min="16" max="48" value="24" />
+    </div>
+
+    <div class="field">
+      <label for="model">Translation Model</label>
+      <select id="model">
+        <option value="gpt-4o-mini">GPT-4o Mini (fast, cheap)</option>
+        <option value="gpt-4o">GPT-4o (higher quality)</option>
+      </select>
+    </div>
+
+    <button id="toggleBtn" class="btn">Start</button>
+    <button id="testBtn" class="btn btn-test">Test Subtitles</button>
+
+    <p id="status" class="status"></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
